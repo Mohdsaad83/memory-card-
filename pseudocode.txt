@@ -1,0 +1,40 @@
+Initialize game board with an even number of cards (pairs of matching cards)
+Shuffle the cards randomly
+Set all cards to "face down"
+Set score to 0
+Set matched_pairs to 0
+Set total_pairs = number_of_cards / 2
+
+WHILE matched_pairs < total_pairs DO
+    Display current state of the board
+    PROMPT player to choose first card (input: position1)
+    
+    IF position1 is already matched or face up THEN
+        DISPLAY "Invalid choice. Pick a different card."
+        CONTINUE to next iteration
+    
+    Reveal card at position1
+    
+    PROMPT player to choose second card (input: position2)
+
+    IF position2 is the same as position1 OR already matched or face up THEN
+        DISPLAY "Invalid choice. Pick a different card."
+        Hide card at position1
+        CONTINUE to next iteration
+
+    Reveal card at position2
+
+    IF card at position1 == card at position2 THEN
+        DISPLAY "Match found!"
+        Mark both cards as matched
+        Increment score
+        Increment matched_pairs
+    ELSE
+        DISPLAY "Not a match."
+        Wait for a moment (to let player see cards)
+        Hide both cards again
+
+END WHILE
+
+DISPLAY "Congratulations! All pairs matched."
+DISPLAY final score
