@@ -1,0 +1,76 @@
+* {
+  font-family: "Creepster";
+}
+/* style.css */
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("joker.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 300px;
+}
+
+h1,
+p,
+#timer {
+  color: aliceblue;
+}
+.container {
+  text-align: center;
+  margin-right: 500px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 80px);
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(7, 7, 7);
+  border: 2px solid #040303;
+  cursor: pointer;
+  user-select: none;
+  border: white 2px solid;
+}
+
+.card img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card.flipped,
+.card.matched {
+  background: #10100f;
+}
+
+button {
+  width: 120px;
+  height: 30px;
+  font-size: 13pt;
+  background-color: #00cc66;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#timer {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 20px;
+}

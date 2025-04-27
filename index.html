@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Creepster&family=Londrina+Shadow&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="timer">Time: 30s</div>
+
+    <div class="container">
+      <h1>Remember the devil was once an angel</h1>
+      <h1>JOKER TRECKS</h1>
+      <div id="game-board" class="grid"></div>
+      <button id="reset-button">Play again</button>
+    </div>
+    <audio autoplay loop>
+      <source src="joker_sound.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <audio id="flip-sound" src="flip.mp3" preload="auto"></audio>
+    <audio id="match-sound" src="match.mp3" preload="auto"></audio>
+    <audio id="fail-sound" src="fail.mp3" preload="auto"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
