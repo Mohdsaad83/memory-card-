@@ -27,6 +27,14 @@
         height: 100vh;
         margin: 0;
       }
+      .form-container {
+        background-color: #333;
+        padding: 20px;
+        border-radius: 10px;
+        display: inline-block;
+        margin: 30px 30px;
+        text-align: center;
+      }
       #title {
         max-width: 500px;
         text-align: center;
@@ -65,11 +73,33 @@
       DIE
       <img src="logo.jpeg" style="width: 50px; height: 50px" />
     </h1>
+    <div class="form-container">
+      <div class="form-group">
+        <label>Choose Difficulty</label>
+        <div class="options">
+          <label
+            ><input type="radio" name="difficulty" value="fast" checked />
+            Fast</label
+          >
+          <label
+            ><input type="radio" name="difficulty" value="medium" />
+            Medium</label
+          >
+          <label
+            ><input type="radio" name="difficulty" value="slow" /> Slow</label
+          >
+        </div>
+      </div>
+    </div>
     <button id="start-button">Start Game</button>
 
     <script>
       document.getElementById("start-button").addEventListener("click", () => {
-        window.location.href = "index.html"
+        const selectedDifficulty = document.querySelector(
+          'input[name="difficulty"]:checked'
+        ).value
+        localStorage.setItem("difficulty", selectedDifficulty)
+        window.location.href = "index.html" // Go to the game page
       })
     </script>
   </body>

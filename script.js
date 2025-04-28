@@ -4,12 +4,21 @@ let flippedCards = []
 let disableClick = false
 
 const flipSound = document.getElementById("flip-sound")
-const matchSound = document.getElementById("match-sound")
+const matchSounds = document.querySelectorAll(".match")
 const failSound = document.getElementById("fail-sound")
 
-// Timer variables
 let timer
 let timeLeft = 30
+let i = 0
+
+const randomSound = () => {
+  if (i === matchSounds.length) {
+    i = 0
+  }
+  const sound = matchSounds[i]
+  i++
+  return sound
+}
 
 const shuffleArray = (array) => {
   const newArray = [...array, ...array]
@@ -35,7 +44,7 @@ const renderCards = () => {
     if (card.flipped || card.matched) {
       cardElement.textContent = card.emoji
     } else {
-      cardElement.innerHTML = `<img src="./joker_icon.gif" width="40" />`
+      cardElement.innerHTML = `<img src="./joker_icon.gif" width="40">`
     }
     cardElement.addEventListener("click", () => handleCardClick(card))
     board.appendChild(cardElement)
@@ -56,7 +65,7 @@ const handleCardClick = (card) => {
       if (first.emoji === second.emoji) {
         first.matched = true
         second.matched = true
-        matchSound.play()
+        randomSound().play()
       } else {
         first.flipped = false
         second.flipped = false
@@ -67,7 +76,7 @@ const handleCardClick = (card) => {
       renderCards()
 
       if (cards.every((card) => card.matched)) {
-        clearInterval(timer) // Stop timer if player wins
+        clearInterval(timer)
         setTimeout(() => {
           alert("🤡 don't think you won, you just learned 🤡")
           resetGame()
@@ -79,8 +88,20 @@ const handleCardClick = (card) => {
 
 const startTimer = () => {
   clearInterval(timer)
-  timeLeft = 30
+
+  // read difficulty from localStorage
+  const difficulty = localStorage.getItem("difficulty") || "fast"
+
+  if (difficulty === "slow") {
+    timeLeft = 50
+  } else if (difficulty === "medium") {
+    timeLeft = 40
+  } else {
+    timeLeft = 30
+  }
+
   document.getElementById("timer").textContent = `Time: ${timeLeft}s`
+  document.getElementById("timer").style.display = "block"
 
   timer = setInterval(() => {
     timeLeft--
@@ -102,4 +123,7 @@ const resetGame = () => {
 }
 
 document.getElementById("reset-button").addEventListener("click", resetGame)
-window.onload = resetGame
+
+window.onload = () => {
+  resetGame()
+}
