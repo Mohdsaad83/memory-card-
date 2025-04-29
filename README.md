@@ -55,7 +55,7 @@ https://photos.app.goo.gl/1nrARUiynPnt6Lgz8
 
 ### **_Credits_**
 
-#####  Images: [https://www.canva.com/en_gb/]
+#####  Images: [joker.gif]
 
 
 
