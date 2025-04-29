@@ -27,6 +27,7 @@
 ### **_Getting Started_**
 
 ##### START UP THE .GAME & BEGAN
+jokersaid.surge.sh
 
 ##### firwire is ready to viewe .
 
