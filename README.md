@@ -30,7 +30,8 @@
 
 ##### firwire is ready to viewe .
 
-##### The project was deployed and can be viewed [https://www.canva.com/design/DAGlW--2AL0/lW-zCFGJML8JXXZTuwxPYA/edit?utm_content=DAGlW--2AL0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton](URL).
+##### The project was deployed and can be viewed
+jokersaid.surge.sh
 
 ---
 
