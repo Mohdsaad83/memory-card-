@@ -31,7 +31,7 @@
 ##### firwire is ready to viewe .
 
 ##### The project was deployed and can be viewed
-jokersaid.surge.sh
+www.jokersaid.surge.sh
 
 ---
 
