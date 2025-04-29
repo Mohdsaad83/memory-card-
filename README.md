@@ -1,6 +1,4 @@
-# Project Title
-
-MEMORY CARD GAME
+# MEMORY CARD
 
 ## Date: 22/4/2025
 
