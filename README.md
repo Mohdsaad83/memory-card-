@@ -27,7 +27,6 @@
 ### **_Getting Started_**
 
 ##### START UP THE .GAME & BEGAN
-jokersaid.surge.sh
 
 ##### firwire is ready to viewe .
 
@@ -39,7 +38,7 @@ jokersaid.surge.sh
 
 ##### image header 1
 
-![jocker](https://www.canva.com/design/DAGlW--2AL0/lW-zCFGJML8JXXZTuwxPYA/edit?utm_content=DAGlW--2AL0&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
+https://photos.app.goo.gl/7Zx2sDi5PuQ5rEcv5
 
 
 ---
